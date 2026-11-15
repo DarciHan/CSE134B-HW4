@@ -1,0 +1,109 @@
+:root {
+    --text-color: #493428;
+    --background-color: #fff8e9;
+    --header-color: #e4e9d8;
+    --link-color: #526D82;
+    --main-font: "Arial Rounded MT Bold", sans-serif;
+}
+
+body {
+    font-family: var(--main-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--header-color);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+/* Targets links inside the navigation */
+nav a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid var(--link-color);
+    outline-offset: 3px;
+}
+/* Targets sections directly inside main */
+main > section {
+   background-color: rgb(210, 203, 203);
+   padding: 1rem;
+    border-radius: 10px;
+     margin-bottom: 20px;
+      margin-top: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: var(--header-color);
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--link-color);
+    margin: 1em;
+}
+
+study-note {
+    display: block;
+    border: 1px solid black;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Targets the email input in the contact form */
+input[type="email"] {
+    background-color: var(--header-color);
+    border: 1px solid var(--link-color);
+    border-radius: 5px;
+}
+
+dialog {
+    position: static;
+    margin: 20px auto;
+    border: 1px solid var(--link-color);
+    border-radius: 10px;
+    background-color: var(--header-color);
+    color: var(--text-color);
+}
