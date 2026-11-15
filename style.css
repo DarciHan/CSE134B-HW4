@@ -3,7 +3,21 @@
     --background-color: #fff8e9;
     --header-color: #e4e9d8;
     --link-color: #526D82;
+    --section-color: #d2cbcb;
+    --input-color: #ffffff;
     --main-font: "Arial Rounded MT Bold", sans-serif;
+
+}
+
+   /* Homework 4 - Part 4 (Dark Theme) */
+
+[data-theme="dark"] {
+    --text-color: #f5eadb;
+    --background-color: #25201e;
+    --header-color: #39312d;
+    --link-color: #b5d4ef;
+    --section-color: #453b36;
+    --input-color: #342d29;
 }
 
 body {
@@ -48,7 +62,7 @@ textarea:focus {
 }
 /* Targets sections directly inside main */
 main > section {
-   background-color: rgb(210, 203, 203);
+   background-color: var(--section-color);
    padding: 1rem;
     border-radius: 10px;
      margin-bottom: 20px;
@@ -106,4 +120,76 @@ dialog {
     border-radius: 10px;
     background-color: var(--header-color);
     color: var(--text-color);
+}
+
+/* Homework 4 - Contact Form */
+
+form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input:not([type="hidden"]),
+form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--link-color);
+    border-radius: 8px;
+    font: inherit;
+    background-color: var(--input-color);
+    color: var(--text-color);
+}
+
+form button {
+    padding: 0.75rem;
+    background-color: var(--link-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font: inherit;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--text-color);
+}
+
+
+/* Homework 4 - Part 2 */
+
+form input:required,
+form textarea:required {
+    border-width: 2px;
+}
+
+form input:user-invalid,
+form textarea:user-invalid {
+    border-color: #b3261e;
+    background-color: #fff0f0;
+}
+
+form input:user-valid,
+form textarea:user-valid {
+    border-color: #347854;
+}
+
+/* Homework 4 - Part 3 (Comment Warnings) */
+
+#form-info {
+    display: block;
+    margin: 0.75rem 0;
+}
+
+#form-info.near-limit {
+    color: #9b321e;
+    font-weight: bold;
+}
+
+#form-info[hidden] {
+    display: none;
 }
