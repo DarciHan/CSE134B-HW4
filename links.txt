@@ -1,7 +1,2 @@
-Part 2:
-
-https://darcihanportfolio.netlify.app/git 
-
-Part3:
-
-https://iridescent-churros-c2bfa5.netlify.app/
+Repository: https://github.com/DarciHan/CSE134B-HW4
+Website: YOUR-DEPLOYED-WEBSITE-URL
